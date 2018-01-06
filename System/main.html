@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>ShiftSystem</title>
+  <meta name="viewport" content="width=device-width user-scalable=no">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/gapi.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=autoAuth"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+
+<body>
+  <!--statuspart-->
+  <div class="status" id="NowStatus">logout</div>
+  <div class="status" id="nowpagename">home</div>
+
+  <!--filterpart-->
+  <div class="filter" id=""></div>
+
+  <!--headerpart-->
+  <div class="headerpart" id="headermainbox">
+    <div class="headerpart headercontents" id="MenuTrrigerBox">
+      <!--menutrriger-->
+      <svg class="headercontents" id="MenuTrrigerSwitch" fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+      </svg>
+    </div>
+    <div class="headerpart headercontents" id="PageNameBox">
+      <!--pagename-->
+      <div class="headerpart headercontents" id="PageName">KGG-SIS</div>
+    </div>
+  </div>
+
+  <!--menupart-->
+  <div class="menupart" id="sidebarmainbox">
+    <div class="menupart statuscontents" id="StatusDisplayBox">
+      <!--statusdispaly-->
+      <div class="statusdispaly" id="statusbox">You must login</div>
+    </div>
+    <div class="menupart" id="MenuPertition"></div>
+    <div class="menupart" id="">
+      <!--mainpagebutton-->
+      <div class="mainpagebutton" id="home">Home</div>
+      <div class="mainpagebutton" id="login">Login</div>
+      <div class="mainpagebutton" id="booking">シフト入力</div>
+      <div class="mainpagebutton" id="logout">Logout</div>
+    </div>
+  </div>
+
+  <!--mainpart-->
+  <div class="mainpart" id="MainBox">
+    <!--homepart-->
+    <div class="mainpart homepart" id="homemainbox">
+      <div class="homepart" id="H-CalenderBox">
+        <div class="homepart c-headminibox" id="C-HeadMainBox">
+          <div class="homepart c-headbox" id="HPastMonth">←</div>
+          <div class="homepart c-headbox" id="HNowDisplayMonth"></div>
+          <div class="homepart c-headbox" id="HNextMonth">→</div>
+        </div>
+        <div class="homepart c-mainbodybox" id="C-BodyMainBox">
+          <div class="homepart c-indexbox" id="C01">Sun</div>
+          <div class="homepart c-indexbox" id="C02">Mon</div>
+          <div class="homepart c-indexbox" id="C03">Tue</div>
+          <div class="homepart c-indexbox" id="C04">Wed</div>
+          <div class="homepart c-indexbox" id="C05">Thu</div>
+          <div class="homepart c-indexbox" id="C06">Fri</div>
+          <div class="homepart c-indexbox" id="C07">Sat</div>
+          <div class="homepart c-bodybox" id="C11"></div>
+          <div class="homepart c-bodybox" id="C12"></div>
+          <div class="homepart c-bodybox" id="C13"></div>
+          <div class="homepart c-bodybox" id="C14"></div>
+          <div class="homepart c-bodybox" id="C15"></div>
+          <div class="homepart c-bodybox" id="C16"></div>
+          <div class="homepart c-bodybox" id="C17"></div>
+          <div class="homepart c-bodybox" id="C21"></div>
+          <div class="homepart c-bodybox" id="C22"></div>
+          <div class="homepart c-bodybox" id="C23"></div>
+          <div class="homepart c-bodybox" id="C24"></div>
+          <div class="homepart c-bodybox" id="C25"></div>
+          <div class="homepart c-bodybox" id="C26"></div>
+          <div class="homepart c-bodybox" id="C27"></div>
+          <div class="homepart c-bodybox" id="C31"></div>
+          <div class="homepart c-bodybox" id="C32"></div>
+          <div class="homepart c-bodybox" id="C33"></div>
+          <div class="homepart c-bodybox" id="C34"></div>
+          <div class="homepart c-bodybox" id="C35"></div>
+          <div class="homepart c-bodybox" id="C36"></div>
+          <div class="homepart c-bodybox" id="C37"></div>
+          <div class="homepart c-bodybox" id="C41"></div>
+          <div class="homepart c-bodybox" id="C42"></div>
+          <div class="homepart c-bodybox" id="C43"></div>
+          <div class="homepart c-bodybox" id="C44"></div>
+          <div class="homepart c-bodybox" id="C45"></div>
+          <div class="homepart c-bodybox" id="C46"></div>
+          <div class="homepart c-bodybox" id="C47"></div>
+          <div class="homepart c-bodybox" id="C51"></div>
+          <div class="homepart c-bodybox" id="C52"></div>
+          <div class="homepart c-bodybox" id="C53"></div>
+          <div class="homepart c-bodybox" id="C54"></div>
+          <div class="homepart c-bodybox" id="C55"></div>
+          <div class="homepart c-bodybox" id="C56"></div>
+          <div class="homepart c-bodybox" id="C57"></div>
+          <div class="homepart c-bodybox" id="C61"></div>
+          <div class="homepart c-bodybox" id="C62"></div>
+          <div class="homepart c-bodybox" id="C63"></div>
+          <div class="homepart c-bodybox" id="C64"></div>
+          <div class="homepart c-bodybox" id="C65"></div>
+          <div class="homepart c-bodybox" id="C66"></div>
+          <div class="homepart c-bodybox" id="C67"></div>
+        </div>
+      </div>
+    </div>
+    <!--loginpart-->
+    <div class="mainpart loginpart" id="loginmainbox">
+      <div class="loginpart" id="MsgBox">※ログインしてください</div>
+      <div class="longinoart" id="loginbox">
+        <div class="loginpart" id="IDMiniBox">
+          <div class="loginpart" id="IdLabel">ID</div><input class="loginpart" id="IdImput" value="">
+        </div>
+        <div class="loginpart" id="PWMiniBox">
+          <div class="loginpart" id="PwLabel">パスワード</div><input type="password" class="loginpart" id="PwImput">
+        </div>
+        <div class="loginpart" id="BMiniBox">
+          <div class="loginpart" id="LoginButton">ログイン</div>
+        </div>
+      </div>
+    </div>
+    <!--logoutpart-->
+    <div class="mainpart logoutpart" id="logoutmainbox">
+      <div class="logoutpart" id="LogoutButton">Logout</div>
+    </div>
+    <!--bookingpart-->
+    <div class="mainpart bookingpart" id="bookingmainbox">
+      <div class="bookingpart" id="B-CalenderBox">
+        <div class="bookingpart b-headmainbox" id="B-HeadMainBox">
+          <div class="bookingpart b-headbox" id="IPastMonth">←</div>
+          <div class="bookingpart b-headbox" id="INowDisplayMonth"></div>
+          <div class="bookingpart b-headbox" id="INextMonth">→</div>
+        </div>
+        <div class="bookingpart b-mainbodybox" id="B-BodyMainBox">
+          <div class="bookingpart b-indexbox" id="B01">Sun</div>
+          <div class="bookingpart b-indexbox" id="B02">Mon</div>
+          <div class="bookingpart b-indexbox" id="B03">Tue</div>
+          <div class="bookingpart b-indexbox" id="B04">Wed</div>
+          <div class="bookingpart b-indexbox" id="B05">Thu</div>
+          <div class="bookingpart b-indexbox" id="B06">Fri</div>
+          <div class="bookingpart b-indexbox" id="B07">Sat</div>
+          <div class="bookingpart b-bodybox" id="B11"></div>
+          <div class="bookingpart b-bodybox" id="B12"></div>
+          <div class="bookingpart b-bodybox" id="B13"></div>
+          <div class="bookingpart b-bodybox" id="B14"></div>
+          <div class="bookingpart b-bodybox" id="B15"></div>
+          <div class="bookingpart b-bodybox" id="B16"></div>
+          <div class="bookingpart b-bodybox" id="B17"></div>
+          <div class="bookingpart b-bodybox" id="B21"></div>
+          <div class="bookingpart b-bodybox" id="B22"></div>
+          <div class="bookingpart b-bodybox" id="B23"></div>
+          <div class="bookingpart b-bodybox" id="B24"></div>
+          <div class="bookingpart b-bodybox" id="B25"></div>
+          <div class="bookingpart b-bodybox" id="B26"></div>
+          <div class="bookingpart b-bodybox" id="B27"></div>
+          <div class="bookingpart b-bodybox" id="B31"></div>
+          <div class="bookingpart b-bodybox" id="B32"></div>
+          <div class="bookingpart b-bodybox" id="B33"></div>
+          <div class="bookingpart b-bodybox" id="B34"></div>
+          <div class="bookingpart b-bodybox" id="B35"></div>
+          <div class="bookingpart b-bodybox" id="B36"></div>
+          <div class="bookingpart b-bodybox" id="B37"></div>
+          <div class="bookingpart b-bodybox" id="B41"></div>
+          <div class="bookingpart b-bodybox" id="B42"></div>
+          <div class="bookingpart b-bodybox" id="B43"></div>
+          <div class="bookingpart b-bodybox" id="B44"></div>
+          <div class="bookingpart b-bodybox" id="B45"></div>
+          <div class="bookingpart b-bodybox" id="B46"></div>
+          <div class="bookingpart b-bodybox" id="B47"></div>
+          <div class="bookingpart b-bodybox" id="B51"></div>
+          <div class="bookingpart b-bodybox" id="B52"></div>
+          <div class="bookingpart b-bodybox" id="B53"></div>
+          <div class="bookingpart b-bodybox" id="B54"></div>
+          <div class="bookingpart b-bodybox" id="B55"></div>
+          <div class="bookingpart b-bodybox" id="B56"></div>
+          <div class="bookingpart b-bodybox" id="B57"></div>
+          <div class="bookingpart b-bodybox" id="B61"></div>
+          <div class="bookingpart b-bodybox" id="B62"></div>
+          <div class="bookingpart b-bodybox" id="B63"></div>
+          <div class="bookingpart b-bodybox" id="B64"></div>
+          <div class="bookingpart b-bodybox" id="B65"></div>
+          <div class="bookingpart b-bodybox" id="B66"></div>
+          <div class="bookingpart b-bodybox" id="B67"></div>
+        </div>
+      </div>
+      <!--planimputpart-->
+      <div class="bookingpart planimput" id="PlanImpoutBox">
+        <div class="bookingpart planimput" id="StatusBox">
+          <div class="bookingpart planimput" id="StatusLabel">業務等:</div>
+          <select class="bookingpart planimput" id="StatusImput">
+            <option selected>(業務)</option>
+            <option>面談</option>
+            <option>TR</option>
+            <option>質問対応</option>
+            <option>その他</option>
+            <option>×</option>
+          </select>
+        </div>
+        <div class="bookingpart planimput" id="ClassRoomBox">
+          <div class="bookingpart planimput" id="ClassRoomLabel">教室:</div>
+          <select class="bookingpart planimput" id="ClassRoomImput">
+            <option selected>湊川</option>
+            <option>長田</option>
+            <option>鈴蘭台</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
