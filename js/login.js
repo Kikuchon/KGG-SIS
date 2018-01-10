@@ -10,6 +10,8 @@ function login(userid,userpw){
     $("#loginmainbox").hide();
     $('#nowpagename').html("home");
     $("#homemainbox").show();
+    $("#IdImput").val("");
+    $("#PwImput").val("");
   } else{
     alert("Login is failed");
   }
