@@ -1,9 +1,8 @@
 function login(userid,userpw){
   if((userid=="100145")&&(userpw=="kikutaku1094")){
-    console.log("Login is successed");
     $("#statusbox").html("菊池 拓哉");
     $("#NowStatus").html("login");
-    alert("Login is successed");
+    alert("Login is successed(100145).");
     $("#home").show();
     $("#booking").show();
     $("#logout").show();
@@ -12,7 +11,6 @@ function login(userid,userpw){
     $('#nowpagename').html("home");
     $("#homemainbox").show();
   } else{
-    console.log("Login is failed");
     alert("Login is failed");
   }
 }
@@ -31,7 +29,6 @@ $(function(){
   $("#LogoutButton").click(function(){
     $("#statusbox").html("You must login");
     $("#NowStatus").html("logout");
-    console.log("logout");
     alert("Logout");
     $("#home").hide();
     $("#booking").hide();
