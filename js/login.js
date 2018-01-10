@@ -1,26 +1,19 @@
-/*$(function(){
-  var nowstatus = $('#NowStatus').text();
-  console.log(nowstatus);
-  if(nowstatus == "logout"){
-    $("#homemainbox").hide();
-    $("#loginmainbox").css({display:block});
-    $("#home").css({display:none});
-    $("#booking").css({display:none});
-    $("#logout").css({display:none});
-  }
-})*/
-
 function login(userid,userpw){
   if((userid=="100145")&&(userpw=="kikutaku1094")){
     console.log("Login is successed");
     $("#statusbox").html("菊池 拓哉");
     $("#NowStatus").html("login");
-    /*$("#home").css({display:block});
-    $("#booking").css({display:block});
-    $("#logout").css({display:block});
-    $("#login").css({display:none});*/
+    alert("Login is successed");
+    $("#home").show();
+    $("#booking").show();
+    $("#logout").show();
+    $("#login").hide();
+    $("#loginmainbox").hide();
+    $('#nowpagename').html("home");
+    $("#homemainbox").show();
   } else{
     console.log("Login is failed");
+    alert("Login is failed");
   }
 }
 
@@ -40,5 +33,12 @@ $(function(){
     $("#NowStatus").html("logout");
     console.log("logout");
     alert("Logout");
+    $("#home").hide();
+    $("#booking").hide();
+    $("#logout").hide();
+    $("#login").show();
+    $("#logoutmainbox").hide();
+    $('#nowpagename').html("login");
+    $("#loginmainbox").show();
   });
 })

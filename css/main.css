@@ -113,8 +113,6 @@ body{
 .statusdispaly{
   height: 24px;
   width: 250px;
-  /*margin-top: 12px;
-  margin-bottom: 12px;*/
 }
 
 .mainpagebutton{
@@ -132,24 +130,6 @@ body{
   background-color: #1b759e
 }
 
-/*
-#home{
-  display: none;
-}
-
-#login{
-  display: block;
-}
-
-#booking{
-  display: none;
-}
-
-#logout{
-  display: none;
-}
-*/
-
 /*mainarea-css*/
 #MainBox{
   padding-top: 64px;
@@ -159,7 +139,7 @@ body{
 
 /*login-css*/
 #loginmainbox{
-  display: none;
+  /*display: none;*/
   width: 100vw;
 }
 
@@ -198,11 +178,12 @@ body{
   height: 24px;
   padding: 4px;
   text-align: center;
+  cursor: pointer;
 }
 
 /*home-css*/
 #homemainbox{
-  display: block;
+  /*display: block;*/
 }
 
 #C-HeadMainBox{
@@ -289,6 +270,7 @@ body{
   text-align: center;
   margin-top: 50px;
   margin-left: calc(50vw - 50px);
+  cursor: pointer;
 }
 
 /*bookingarea-css*/
