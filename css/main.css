@@ -140,11 +140,13 @@ body{
 /*login-css*/
 #loginmainbox{
   /*display: none;*/
-  width: 100vw;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  width: 60vw;
 }
 
 #MsgBox{
-  font-size: 24px;
+  font-size: 16px;
   color: #e92020;
 }
 
@@ -348,6 +350,68 @@ body{
   float: left;
 }
 
-#PlanImpoutBox{
+#PlanImputBox{
   display: none;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  width: 80vw;
+}
+
+#CloseTrigger{
+  float: right;
+}
+
+#DayDisplay{
+  height: 24px;
+  padding: 4px;
+  font-weight: bold;
+}
+
+#StatusBox{
+  width: 80vw;
+  height: 24px;
+  padding: 2px;
+}
+
+.StatusMiniBox{
+  float: left;
+  width: auto;
+  height: 24px;
+}
+
+#ClassRoomBox{
+  width: 80vw;
+  height: 24px;
+  padding: 2px;
+}
+
+.ClassMiniBox{
+  float: left;
+  width: auto;
+  height: 24px;
+}
+
+#TimeBox{
+  width: 80vw;
+  height: 24px;
+  padding: 2px;
+}
+
+.TimeMiniBox{
+  float: left;
+  width: auto;
+  height: 24px;
+}
+
+#PlanImputButton{
+  background-color: #e98d20;
+  border: 1px solid #a9a9a9;
+  color: #ffffff;
+  width: 100px;
+  height: 24px;
+  padding: 4px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: calc(40vw - 50px);
+  cursor: pointer;
 }

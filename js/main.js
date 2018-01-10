@@ -41,8 +41,12 @@ $(function(){
 })
 
 function openSidebar(){
+  var nowId = $("#nowpagename").text();
+  var nowBoxId = nowId + 'mainbox';
+  $(document.getElementById(nowBoxId)).hide();
   $('.filter').show().css({zIndex:5});
   $("#sidebarmainbox").show().animate({left:0},{duration:250});
+  $("#MainBox").hide();
 }
 
 function closeSidebar(){
@@ -61,12 +65,17 @@ $(function(){
 
 $(function(){
   $('.filter').click(function(){
+    $("#MainBox").show();
+    var nowId = $("#nowpagename").text();
+    var nowBoxId = nowId + 'mainbox';
+    $(document.getElementById(nowBoxId)).show();
     closeSidebar();
   });
 });
 
 $(function(){
   $('.mainpagebutton').click(function(){
+    $("#MainBox").show();
     var preId = $("#nowpagename").text();
     var newId = this.id;
     var preBoxId = preId+'mainbox';
@@ -77,3 +86,36 @@ $(function(){
     $(document.getElementById(newBoxId)).show();
   });
 });
+
+$(function(){
+  $('.b-bodybox').click(function(){
+    var dayBoxId = this.id;
+    var dayValue = $(document.getElementById(dayBoxId)).text();
+    var monthValue = $('#INowDisplayMonth').text();
+    var DisplayValue = monthValue + dayValue + '日';
+
+    $("#B-CalenderBox").hide();
+    $("#PlanImputBox").show();
+    $("#DayDisplay").html(DisplayValue);
+  });
+});
+
+$(function(){
+  $("#PlanImputButton").click(function(){
+    $("#B-CalenderBox").show();
+    $("#PlanImputBox").hide();
+    $("#DayDisplay").html("");
+    $("#StatusImput").html("<option selected>(業務)</option><option>面談</option><option>TR</option><option>質問対応</option><option>OP</option><option>その他</option><option>×</option>")
+    $("#ClassRoomImput").html("<option selected>湊川</option><option>長田</option><option>鈴蘭台</option>")
+    $("#TimeImput").html("<option selected>(時間)</option><option>午前</option><option>昼～夕方</option><option>16:00~</option><option>16:30~</option><option>17:00~</option><option>17:30~</option><option>18:00~</option><option>18:30~</option><option>19:00~</option><option>19:30~</option><option>20:00~</option><option>20:30~</option><option>21:00~</option>")
+    alert("登録しました");
+  });
+});
+
+$(function(){
+  $("#CloseTrigger").click(function(){
+    $("#B-CalenderBox").show();
+    $("#PlanImputBox").hide();
+    $("#DayDisplay").html("");
+  })
+})

@@ -9,15 +9,15 @@
   <script src="js/main.js"></script>
   <script src="js/login.js"></script>
   <script src="js/gapi.js"></script>
-  <script src="https://apis.google.com/js/client.js?onload=autoAuth"></script>
+  <!--<script src="https://apis.google.com/js/client.js?onload=autoAuth"></script>-->
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/login.css">
+  <!--<link rel="stylesheet" href="css/login.css">-->
 </head>
 
 
 <body>
   <!--statuspart-->
-  <div class="status" id="NowStatus">logout</div>
+  <div class="status" id="NowStatus">login</div>
   <div class="status" id="nowpagename">home</div>
 
   <!--filterpart-->
@@ -197,26 +197,54 @@
         </div>
       </div>
       <!--planimputpart-->
-      <div class="bookingpart planimput" id="PlanImpoutBox">
+      <div class="bookingpart planimput" id="PlanImputBox">
+        <div class="bookingpart planimput" id="CloseTrigger">
+          <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </div>
+        <div class="bookingpart planimput" id="DayDisplay"></div>
         <div class="bookingpart planimput" id="StatusBox">
-          <div class="bookingpart planimput" id="StatusLabel">業務等:</div>
-          <select class="bookingpart planimput" id="StatusImput">
+          <div class="bookingpart planimput StatusMiniBox" id="StatusLabel">業務等:</div>
+          <select class="bookingpart planimput StatusMiniBox" id="StatusImput">
             <option selected>(業務)</option>
             <option>面談</option>
             <option>TR</option>
             <option>質問対応</option>
+            <option>OP</option>
             <option>その他</option>
             <option>×</option>
           </select>
         </div>
         <div class="bookingpart planimput" id="ClassRoomBox">
-          <div class="bookingpart planimput" id="ClassRoomLabel">教室:</div>
-          <select class="bookingpart planimput" id="ClassRoomImput">
+          <div class="bookingpart planimput ClassMiniBox" id="ClassRoomLabel">教室:</div>
+          <select class="bookingpart planimput ClassMiniBox" id="ClassRoomImput">
             <option selected>湊川</option>
             <option>長田</option>
             <option>鈴蘭台</option>
           </select>
         </div>
+        <div class="bookingpart planimput" id="TimeBox">
+          <div class="bookingpart planimput TimeMiniBox" id="TimeLabel">時間:</div>
+          <select class="bookingpart planimput TimeMiniBox" id="TimeImput">
+            <option selected>(時間)</option>
+            <option>午前</option>
+            <option>昼～夕方</option>
+            <option>16:00~</option>
+            <option>16:30~</option>
+            <option>17:00~</option>
+            <option>17:30~</option>
+            <option>18:00~</option>
+            <option>18:30~</option>
+            <option>19:00~</option>
+            <option>19:30~</option>
+            <option>20:00~</option>
+            <option>20:30~</option>
+            <option>21:00~</option>
+          </select>
+        </div>
+        <div class="bookingpart planimput" id="PlanImputButton">登録</div>
       </div>
     </div>
   </div>
