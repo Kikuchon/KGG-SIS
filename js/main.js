@@ -27,6 +27,7 @@ $(function(){
   var DisplayYM = ThisYear+DisplayMonth;
   $('#HNowDisplayMonth').html(DisplayYM);
   $('#INowDisplayMonth').html(DisplayYM);
+  var LastDate = (new Date(year,cMonth,0)).getDate();
   for(var row = 0; row<6; row++){
     for(var column = 0; column<7; column++){
       var Row = row + 1;
@@ -34,8 +35,11 @@ $(function(){
       var HCell = "C"+Row+Column;
       var ICell = "B"+Row+Column;
       var va = row*7 + Column-CDay;
-      document.getElementById(HCell).textContent=va;
-      document.getElementById(ICell).textContent=va;
+      if(va < 1) {}
+      else if(va <= LastDate) {
+        document.getElementById(HCell).textContent=va;
+        document.getElementById(ICell).textContent=va;
+      }
     }
   }
 })
