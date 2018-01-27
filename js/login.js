@@ -1,9 +1,11 @@
 function login(userid,userpw){
   if((userid=="100145")&&(userpw=="kikutaku1094")){
     $("#statusbox").html("菊池 拓哉");
+    $("#UserStatus").html("Master");
     $("#NowStatus").html("login");
     alert("Login is successed(100145).");
     $("#home").show();
+    $("#check").show();
     $("#booking").show();
     $("#logout").show();
     $("#login").hide();
@@ -31,9 +33,11 @@ $(function(){
   $("#LogoutButton").click(function(){
     $("#statusbox").html("You must login");
     $("#NowStatus").html("logout");
+    $("#UserStatus").html("none");
     alert("Logout");
     $("#home").hide();
     $("#booking").hide();
+    $("#check").hide();
     $("#logout").hide();
     $("#login").show();
     $("#logoutmainbox").hide();

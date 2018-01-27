@@ -25,19 +25,19 @@ $(function(){
   var ThisYear = year+'年'
 
   var DisplayYM = ThisYear+DisplayMonth;
-  $('#HNowDisplayMonth').html(DisplayYM);
+  $('#CNowDisplayMonth').html(DisplayYM);
   $('#INowDisplayMonth').html(DisplayYM);
   var LastDate = (new Date(year,cMonth,0)).getDate();
   for(var row = 0; row<6; row++){
     for(var column = 0; column<7; column++){
       var Row = row + 1;
       var Column = column + 1;
-      var HCell = "C"+Row+Column;
+      var CCell = "C"+Row+Column;
       var ICell = "B"+Row+Column;
       var va = row*7 + Column-CDay;
       if(va < 1) {}
       else if(va <= LastDate) {
-        document.getElementById(HCell).textContent=va;
+        document.getElementById(CCell).textContent=va;
         document.getElementById(ICell).textContent=va;
       }
     }

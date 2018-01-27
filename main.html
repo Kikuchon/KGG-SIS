@@ -18,6 +18,7 @@
 <body>
   <!--statuspart-->
   <div class="status" id="NowStatus">logout</div>
+  <div class="status" id="UserStatus">none</div>
   <div class="status" id="nowpagename">home</div>
 
   <!--filterpart-->
@@ -49,7 +50,8 @@
       <!--mainpagebutton-->
       <div class="mainpagebutton" id="home">Home</div>
       <div class="mainpagebutton" id="login">Login</div>
-      <div class="mainpagebutton" id="booking">シフト入力</div>
+      <div class="mainpagebutton" id="check">シフト確認</div>
+      <div class="mainpagebutton" id="booking">シフト登録</div>
       <div class="mainpagebutton" id="logout">Logout</div>
     </div>
   </div>
@@ -58,62 +60,77 @@
   <div class="mainpart" id="MainBox">
     <!--homepart-->
     <div class="mainpart homepart" id="homemainbox">
-      <div class="homepart" id="H-CalenderBox">
-        <div class="homepart c-headminibox" id="C-HeadMainBox">
-          <div class="homepart c-headbox" id="HPastMonth">←</div>
-          <div class="homepart c-headbox" id="HNowDisplayMonth"></div>
-          <div class="homepart c-headbox" id="HNextMonth">→</div>
+      <div class="homepart" id="TodayShiftCheck">
+        <div class="homepart" id="TodayShiftCheckTitle"><b>本日のシフト</b></div>
+        <div class="homepart" id="TodayShiftCheckMember">
+          <li id="TodayMember">菊池 教室:湊川 入室予定:17:00~ 業務:面談</li>
         </div>
-        <div class="homepart c-mainbodybox" id="C-BodyMainBox">
-          <div class="homepart c-indexbox" id="C01">Sun</div>
-          <div class="homepart c-indexbox" id="C02">Mon</div>
-          <div class="homepart c-indexbox" id="C03">Tue</div>
-          <div class="homepart c-indexbox" id="C04">Wed</div>
-          <div class="homepart c-indexbox" id="C05">Thu</div>
-          <div class="homepart c-indexbox" id="C06">Fri</div>
-          <div class="homepart c-indexbox" id="C07">Sat</div>
-          <div class="homepart c-bodybox" id="C11"></div>
-          <div class="homepart c-bodybox" id="C12"></div>
-          <div class="homepart c-bodybox" id="C13"></div>
-          <div class="homepart c-bodybox" id="C14"></div>
-          <div class="homepart c-bodybox" id="C15"></div>
-          <div class="homepart c-bodybox" id="C16"></div>
-          <div class="homepart c-bodybox" id="C17"></div>
-          <div class="homepart c-bodybox" id="C21"></div>
-          <div class="homepart c-bodybox" id="C22"></div>
-          <div class="homepart c-bodybox" id="C23"></div>
-          <div class="homepart c-bodybox" id="C24"></div>
-          <div class="homepart c-bodybox" id="C25"></div>
-          <div class="homepart c-bodybox" id="C26"></div>
-          <div class="homepart c-bodybox" id="C27"></div>
-          <div class="homepart c-bodybox" id="C31"></div>
-          <div class="homepart c-bodybox" id="C32"></div>
-          <div class="homepart c-bodybox" id="C33"></div>
-          <div class="homepart c-bodybox" id="C34"></div>
-          <div class="homepart c-bodybox" id="C35"></div>
-          <div class="homepart c-bodybox" id="C36"></div>
-          <div class="homepart c-bodybox" id="C37"></div>
-          <div class="homepart c-bodybox" id="C41"></div>
-          <div class="homepart c-bodybox" id="C42"></div>
-          <div class="homepart c-bodybox" id="C43"></div>
-          <div class="homepart c-bodybox" id="C44"></div>
-          <div class="homepart c-bodybox" id="C45"></div>
-          <div class="homepart c-bodybox" id="C46"></div>
-          <div class="homepart c-bodybox" id="C47"></div>
-          <div class="homepart c-bodybox" id="C51"></div>
-          <div class="homepart c-bodybox" id="C52"></div>
-          <div class="homepart c-bodybox" id="C53"></div>
-          <div class="homepart c-bodybox" id="C54"></div>
-          <div class="homepart c-bodybox" id="C55"></div>
-          <div class="homepart c-bodybox" id="C56"></div>
-          <div class="homepart c-bodybox" id="C57"></div>
-          <div class="homepart c-bodybox" id="C61"></div>
-          <div class="homepart c-bodybox" id="C62"></div>
-          <div class="homepart c-bodybox" id="C63"></div>
-          <div class="homepart c-bodybox" id="C64"></div>
-          <div class="homepart c-bodybox" id="C65"></div>
-          <div class="homepart c-bodybox" id="C66"></div>
-          <div class="homepart c-bodybox" id="C67"></div>
+      </div>
+      <div class="homepart" id="contact">
+        <div class="homepart" id="ContactContentCard">
+          <div class="homepart" id="ContactContentCardTitle"><b>TEST</b></div>
+          <div class="homepart" id="ContactContentCardItem">TEST</div>
+        </div>
+      </div>
+    </div>
+    <!--checkpart-->
+    <div class="mainpart checkpart" id="checkmainbox">
+      <div class="checkpart" id="C-CalenderBox">
+        <div class="checkpart c-headminibox" id="C-HeadMainBox">
+          <div class="checkpart c-headbox" id="CPastMonth">←</div>
+          <div class="checkpart c-headbox" id="CNowDisplayMonth"></div>
+          <div class="checkpart c-headbox" id="CNextMonth">→</div>
+        </div>
+        <div class="checkpart c-mainbodybox" id="C-BodyMainBox">
+          <div class="checkpart c-indexbox" id="C01">Sun</div>
+          <div class="checkpart c-indexbox" id="C02">Mon</div>
+          <div class="checkpart c-indexbox" id="C03">Tue</div>
+          <div class="checkpart c-indexbox" id="C04">Wed</div>
+          <div class="checkpart c-indexbox" id="C05">Thu</div>
+          <div class="checkpart c-indexbox" id="C06">Fri</div>
+          <div class="checkpart c-indexbox" id="C07">Sat</div>
+          <div class="checkpart c-bodybox" id="C11"></div>
+          <div class="checkpart c-bodybox" id="C12"></div>
+          <div class="checkpart c-bodybox" id="C13"></div>
+          <div class="checkpart c-bodybox" id="C14"></div>
+          <div class="checkpart c-bodybox" id="C15"></div>
+          <div class="checkpart c-bodybox" id="C16"></div>
+          <div class="checkpart c-bodybox" id="C17"></div>
+          <div class="checkpart c-bodybox" id="C21"></div>
+          <div class="checkpart c-bodybox" id="C22"></div>
+          <div class="checkpart c-bodybox" id="C23"></div>
+          <div class="checkpart c-bodybox" id="C24"></div>
+          <div class="checkpart c-bodybox" id="C25"></div>
+          <div class="checkpart c-bodybox" id="C26"></div>
+          <div class="checkpart c-bodybox" id="C27"></div>
+          <div class="checkpart c-bodybox" id="C31"></div>
+          <div class="checkpart c-bodybox" id="C32"></div>
+          <div class="checkpart c-bodybox" id="C33"></div>
+          <div class="checkpart c-bodybox" id="C34"></div>
+          <div class="checkpart c-bodybox" id="C35"></div>
+          <div class="checkpart c-bodybox" id="C36"></div>
+          <div class="checkpart c-bodybox" id="C37"></div>
+          <div class="checkpart c-bodybox" id="C41"></div>
+          <div class="checkpart c-bodybox" id="C42"></div>
+          <div class="checkpart c-bodybox" id="C43"></div>
+          <div class="checkpart c-bodybox" id="C44"></div>
+          <div class="checkpart c-bodybox" id="C45"></div>
+          <div class="checkpart c-bodybox" id="C46"></div>
+          <div class="checkpart c-bodybox" id="C47"></div>
+          <div class="checkpart c-bodybox" id="C51"></div>
+          <div class="checkpart c-bodybox" id="C52"></div>
+          <div class="checkpart c-bodybox" id="C53"></div>
+          <div class="checkpart c-bodybox" id="C54"></div>
+          <div class="checkpart c-bodybox" id="C55"></div>
+          <div class="checkpart c-bodybox" id="C56"></div>
+          <div class="checkpart c-bodybox" id="C57"></div>
+          <div class="checkpart c-bodybox" id="C61"></div>
+          <div class="checkpart c-bodybox" id="C62"></div>
+          <div class="checkpart c-bodybox" id="C63"></div>
+          <div class="checkpart c-bodybox" id="C64"></div>
+          <div class="checkpart c-bodybox" id="C65"></div>
+          <div class="checkpart c-bodybox" id="C66"></div>
+          <div class="checkpart c-bodybox" id="C67"></div>
         </div>
       </div>
     </div>

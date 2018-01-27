@@ -185,7 +185,43 @@ body{
 
 /*home-css*/
 #homemainbox{
-  /*display: block;*/
+
+}
+
+#TodayShiftCheck{
+  width: 75vw;
+  margin-left: calc(50vw - 32.5vw);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#TodayShiftCheckTitle{
+  font-size: 24px;
+}
+
+#contact{
+  width: 75vw;
+  margin-left: calc(50vw - 32.5vw);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#ContactContentCard{
+  width: inherit;
+  border: 1px solid #000
+}
+
+#ContactContentCardTitle{
+  font-size: 24px;
+}
+
+#ContactContentCardItem{
+  font-size: 16px;
+}
+
+/*check-css*/
+#checkmainbox{
+  display: none
 }
 
 #C-HeadMainBox{
@@ -202,7 +238,7 @@ body{
   float: left;
 }
 
-#HPastMonth{
+#CPastMonth{
   height: 32px;
   width: 40px;
   border-right: 1px solid #000000;
@@ -211,7 +247,7 @@ body{
   font-size: 24px;
 }
 
-#HNowDisplayMonth{
+#CNowDisplayMonth{
   height: 32px;
   width: 200px;
   border-right: 1px solid #000000;
@@ -220,7 +256,7 @@ body{
   font-size: 24px;
 }
 
-#HNextMonth{
+#CNextMonth{
   height: 32px;
   width: 40px;
   border-right: 1px solid #000000;
