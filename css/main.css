@@ -227,11 +227,10 @@ body{
 #C-HeadMainBox{
   margin-top: 16px;
   margin-left: 16px;
-  height: 32px;
+  height:32px;
   width: 280px;
   border-top: 1px solid #000000;
   border-left: 1px solid #000000;
-
 }
 
 .c-headbox{
