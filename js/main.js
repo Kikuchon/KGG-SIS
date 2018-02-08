@@ -108,7 +108,6 @@ $(function(){
     var dayValue = $(document.getElementById(dayBoxId)).text();
     var monthValue = $('#INowDisplayMonth').text();
     var DisplayValue = monthValue + dayValue + '日';
-    alert(dayValue);
     if(dayValue>0){
       $("#B-CalenderBox").hide();
       $("#PlanImputBox").show();
