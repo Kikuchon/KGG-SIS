@@ -5,6 +5,7 @@ $(function(){
     $("#home").hide();
     $("#booking").hide();
     $("#logout").hide();
+    $("#check").hide();
     $("#homemainbox").hide();
     $('#nowpagename').html("login");
     $("#loginmainbox").show();
