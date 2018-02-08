@@ -43,8 +43,15 @@ $(function(){
     }
   }
   if(va<LastDate){
-    document.getElementById(CCell).textContent=va;
-    document.getElementById(ICell).textContent=va;
+    $('.cBodybox').css({'height': 'calc((86vh - 64px)/7)'});
+    for(var column = 0; column<7; column++){
+      if(va<=LastDate){
+        document.getElementById(CCell).textContent='<div class="checkpart c-bodybox" id="C6'&column+1&'">va</div>;'
+        document.getElementById(ICell).textContent=va;
+      }else {
+        document.getElementById(CCell).textContent='<div class="checkpart c-bodybox" id="C6'&column+1&'"></div>;'
+      }
+    }
   }
 })
 
@@ -101,10 +108,14 @@ $(function(){
     var dayValue = $(document.getElementById(dayBoxId)).text();
     var monthValue = $('#INowDisplayMonth').text();
     var DisplayValue = monthValue + dayValue + '日';
+    alert(dayValue);
+    if(dayValue>0){
+      $("#B-CalenderBox").hide();
+      $("#PlanImputBox").show();
+      $("#DayDisplay").html(DisplayValue);
+    }else {
 
-    $("#B-CalenderBox").hide();
-    $("#PlanImputBox").show();
-    $("#DayDisplay").html(DisplayValue);
+    }
   });
 });
 
